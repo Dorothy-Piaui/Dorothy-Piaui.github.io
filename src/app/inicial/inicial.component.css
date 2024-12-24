@@ -1,0 +1,35 @@
+/*Rodapé*/
+footer {
+    display: flex !important;
+    flex-direction: row;
+    padding: 30px 70px 30px 70px;
+    background-color: var(--cor6);
+}
+
+mat-toolbar{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer mat-toolbar .esquerdo span{
+    padding-right: 30px;
+}
+
+footer mat-toolbar .direito span{
+    padding-right: 10px;
+}
+
+footer mat-toolbar .esquerdo{
+    justify-content: flex-start;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 0 0 0;
+}
+
+footer mat-toolbar .direito{
+    justify-content: flex-end;
+    width: fit-content;
+    height: fit-content;
+    padding: 0 0 0 0;
+}
