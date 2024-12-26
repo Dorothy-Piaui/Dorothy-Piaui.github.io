@@ -51,7 +51,7 @@ header .navbar .container-fluid {
 
 
 /*Welcome*/
-.container {
+.welcome {
     display: flex;
     width: fit-content;
     flex-direction: column;
@@ -60,30 +60,30 @@ header .navbar .container-fluid {
     padding: 30px 70px 30px 70px;
 }
 
-mat-card {
+.card {
     display: flex;
-    align-items: center;
-    width: 100%;
+    width: 60%;
     padding-bottom: 30px;
+    background-color: transparent;
+    text-align: center;
+    border: none;
 }
 
-mat-card-title {
+.card-title {
     padding-bottom: 30px;
     font-size: var(--font-size4);
     color: var(--cor1);
     font-family: var(--font1);
     font-weight: var(--font-weight1);
-    position: relative;
 }
 
 
-mat-card-content {
+.card-text {
     padding-bottom: 30px;
     font-size: var(--font-size3);
     color: var(--cor5);
     font-family: var(--font2) !important;
     font-weight: var(--font-weight2);
-    width: 61%;
     position: relative;
 }
 
@@ -100,11 +100,9 @@ button {
 }
 
 /*Realizações*/
-
-
 .realizacoes{
     position: relative;
-    top: 35px;
+    top: 45px;
     width: 100%;
     height: 500px;
     background-image: url("/assets/images/onda.png");
