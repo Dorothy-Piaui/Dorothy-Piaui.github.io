@@ -5,6 +5,8 @@ import { ContatoComponent } from "./contato/contato.component";
 import { InicialComponent } from "./inicial/inicial.component";
 import { ParticipacoesComponent } from './participacoes/participacoes.component';
 import { ProjetosComponent } from "./projetos/projetos.component";
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +16,9 @@ import { ProjetosComponent } from "./projetos/projetos.component";
     ContatoComponent,
     InicialComponent,
     ParticipacoesComponent,
-    ProjetosComponent
+    ProjetosComponent,
+    HeaderComponent,
+    FooterComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

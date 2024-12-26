@@ -4,7 +4,6 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { ParticipacoesComponent } from './participacoes/participacoes.component';
 import { ContatoComponent } from './contato/contato.component';
 import { Routes } from '@angular/router';
-import { Component } from '@angular/core';
 
 export const routes: Routes = [
     { path: '', component: InicialComponent },

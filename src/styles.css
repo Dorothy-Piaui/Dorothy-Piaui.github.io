@@ -1,9 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
 :root {
     --cor1: #BF213E;
     --cor2: #F59520;
     --cor3: #F8EBDA;
-    --cor4: #000000;
+    --cor4: #1C4443;
     --cor5: #FDFDFB;
     --cor6: #FCE0BD;
 
@@ -22,8 +21,5 @@
 
 html,
 body {
-
     height: 100%;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
