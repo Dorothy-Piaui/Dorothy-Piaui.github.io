@@ -3,21 +3,6 @@ main{
 }
 
 /*Cabeçalho*/
-header .navbar {
-    top: 0;
-    display: flex;
-    padding: 30px 70px 30px 70px; 
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    justify-content: initial !important;
-}
-
-header .navbar .container-fluid {
-    padding: 0 0 0 0;
-    justify-content: initial !important;
-}
-
 .header-background {
     position: absolute;
     inset: 0;
@@ -29,27 +14,6 @@ header .navbar .container-fluid {
 
 }
 
-.logo {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.navbar-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.navbar-nav span a {
-    padding: 0 10px 0 0;
-    position: relative;
-    text-decoration: none;
-    color: var(--cor1);
-    font-family: var(--font1);
-    font-size: var(--font-size2);
-    font-weight: var(--font-weight1);
-}
-
-
 /*Welcome*/
 .welcome {
     display: flex;
@@ -57,7 +21,7 @@ header .navbar .container-fluid {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30px 70px 30px 70px;
+    padding: 30px 70px 65px 70px;
 }
 
 .card {
@@ -76,7 +40,6 @@ header .navbar .container-fluid {
     font-family: var(--font1);
     font-weight: var(--font-weight1);
 }
-
 
 .card-text {
     padding-bottom: 30px;
@@ -100,18 +63,14 @@ button {
 }
 
 /*Realizações*/
-.realizacoes{
+.realizacoes {
     position: relative;
-    top: 45px;
-    width: 100%;
-    height: 500px;
+    padding: 60px 70px 60px 70px;
+    margin: 0;
     background-image: url("/assets/images/onda.png");
     background-size: cover;
-    padding: 60px 70px 60px 70px;
-}
-
-.realizacoes .carousel{
-    margin: 0 0 0 0;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .realizacoes .carousel-item{
@@ -122,6 +81,8 @@ button {
     flex-direction: row;
     background-color: transparent;
     border: none;
+    width: 100%;
+    height: 100%;
 }
 
 .realizacoes .card-body{
@@ -129,6 +90,7 @@ button {
     padding-left: 100px; 
     display: flex !important;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .realizacoes .img1{
@@ -144,7 +106,7 @@ button {
     color: var(--cor2);
     font-family: var(--font1);
     font-weight: var(--font-weight1);
-    padding: 0 0 0 0;
+    padding: 0;
 }
 
 .realizacoes .card-text{
@@ -153,10 +115,11 @@ button {
     font-family: var(--font2);
     font-weight: var(--font-weight2);
     padding: 30px 0 60px 0;
+    text-align: start;
 }
 
 .realizacoes .btn{
-    justify-content: end;
+    align-self: flex-end;
     font-size: var(--font-size3);
     color: var(--cor3) !important;
     font-family: var(--font1);
@@ -171,12 +134,9 @@ button {
 /*Participações*/
 .participacoes {
     position: relative;
-}
-
-.participacoes .container{
-    padding: 60px 70px 60px 70px;
-    margin: 0 0 0 0;
-    
+    display: flex;
+    padding: 60px 70px 60px 70px !important;
+    margin: 0;
 }
 
 .participacoes h1{
@@ -191,6 +151,7 @@ button {
 .participacoes .card{
     background-color: var(--cor3);
     width: 350px;
+    height: fit-content;
     border-radius: 10px 10px 10px 10px;
     align-items: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -206,7 +167,7 @@ button {
 
 .participacoes img{
     width: 350px;
-    height: 250px;
+    height: 350px;
 }
 
 .participacoes .card-text{
@@ -227,21 +188,4 @@ button {
     color: var(--cor1);
     width: 30px;
     height: 30px;
-}
-
-/*Rodapé*/
-footer {
-    display: flex !important;
-    flex-direction: row;
-    padding: 30px 70px 30px 70px;
-    background-color: var(--cor6);
-    position: relative;
-}
-
-footer .esquerdo span, footer .direito span {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    height: fit-content;
-    padding: 0 10px 0 0;
 }

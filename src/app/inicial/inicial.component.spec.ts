@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InicialComponent } from './inicial.component';
 
 describe('InicialComponent', () => {
