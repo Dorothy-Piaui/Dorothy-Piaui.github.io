@@ -3,6 +3,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-inicial',
@@ -10,7 +11,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    NgbCarouselModule
   ],
   templateUrl: './inicial.component.html',
   styleUrl: './inicial.component.css'

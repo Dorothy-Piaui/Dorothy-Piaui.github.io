@@ -3,17 +3,19 @@ main{
 }
 
 /*Cabeçalho*/
-header mat-toolbar {
+header .navbar {
     top: 0;
     display: flex;
-    padding: 30px 70px 30px 70px;
+    padding: 30px 70px 30px 70px; 
     width: 100%;
     height: 100%;
     max-width: 100%;
+    justify-content: initial !important;
 }
 
-header mat-toolbar mat-toolbar-row {
+header .navbar .container-fluid {
     padding: 0 0 0 0;
+    justify-content: initial !important;
 }
 
 .header-background {
@@ -31,7 +33,13 @@ header mat-toolbar mat-toolbar-row {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.itens-menu span a {
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navbar-nav span a {
     padding: 0 10px 0 0;
     position: relative;
     text-decoration: none;
@@ -45,7 +53,7 @@ header mat-toolbar mat-toolbar-row {
 /*Welcome*/
 .container {
     display: flex;
-    width: 100%;
+    width: fit-content;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -92,18 +100,20 @@ button {
 }
 
 /*Realizações*/
-.realizacoes .carousel{
+
+
+.realizacoes{
     position: relative;
-    background-image: url("/assets/images/onda.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
+    top: 35px;
     width: 100%;
-    height: 100%;    
-    size: 100%;
+    height: 500px;
+    background-image: url("/assets/images/onda.png");
+    background-size: cover;
+    padding: 60px 70px 60px 70px;
 }
 
-.realizacoes .carousel-inner{
-    padding: 60px 70px 60px 70px;
+.realizacoes .carousel{
+    margin: 0 0 0 0;
 }
 
 .realizacoes .carousel-item{
@@ -112,9 +122,11 @@ button {
 }
 .realizacoes .evento1, .evento2{
     flex-direction: row;
+    background-color: transparent;
+    border: none;
 }
 
-.realizacoes .descricao{
+.realizacoes .card-body{
     display: flex;
     padding-left: 100px; 
     display: flex !important;
@@ -129,7 +141,7 @@ button {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.realizacoes mat-card-header{
+.realizacoes .card-title{
     font-size: var(--font-size4);
     color: var(--cor2);
     font-family: var(--font1);
@@ -137,7 +149,7 @@ button {
     padding: 0 0 0 0;
 }
 
-.realizacoes mat-card-content{
+.realizacoes .card-text{
     font-size: var(--font-size3);
     color: var(--cor4);
     font-family: var(--font2);
@@ -145,11 +157,8 @@ button {
     padding: 30px 0 60px 0;
 }
 
-.realizacoes mat-card-actions{
+.realizacoes .btn{
     justify-content: end;
-}
-
-.realizacoes mat-card-actions button{
     font-size: var(--font-size3);
     color: var(--cor3) !important;
     font-family: var(--font1);
@@ -169,6 +178,7 @@ button {
 .participacoes .container{
     padding: 60px 70px 60px 70px;
     margin: 0 0 0 0;
+    
 }
 
 .participacoes h1{
@@ -180,7 +190,7 @@ button {
     text-align: start;
 }
 
-.participacoes mat-card{
+.participacoes .card{
     background-color: var(--cor3);
     width: 350px;
     border-radius: 10px 10px 10px 10px;
@@ -188,7 +198,7 @@ button {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.participacoes mat-card-title{
+.participacoes .card-title{
     padding-top: 10px !important;
     font-size: var(--font-size1);
     color: var(--cor1);
@@ -201,7 +211,7 @@ button {
     height: 250px;
 }
 
-.participacoes mat-card-content{
+.participacoes .card-text{
     font-size: var(--font-size3);
     color: var(--cor4);
     font-family: var(--font2);
@@ -215,10 +225,10 @@ button {
     background-color: transparent;
 }
 
-.participacoes mat-icon{
+.participacoes button svg{
     color: var(--cor1);
-    font-size: x-large;
-    width: 100%;
+    width: 30px;
+    height: 30px;
 }
 
 /*Rodapé*/
@@ -230,31 +240,10 @@ footer {
     position: relative;
 }
 
-mat-toolbar {
+footer .esquerdo span, footer .direito span {
+    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-footer mat-toolbar .esquerdo span {
-    padding-right: 30px;
-}
-
-footer mat-toolbar .direito span {
-    padding-right: 10px;
-}
-
-footer mat-toolbar .esquerdo {
-    justify-content: flex-start;
     width: fit-content;
     height: fit-content;
-    padding: 0 0 0 0;
+    padding: 0 10px 0 0;
 }
-
-footer mat-toolbar .direito {
-    justify-content: flex-end;
-    width: fit-content;
-    height: fit-content;
-    padding: 0 0 0 0;
-}
-
