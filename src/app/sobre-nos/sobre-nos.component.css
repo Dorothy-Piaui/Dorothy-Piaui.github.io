@@ -1,0 +1,127 @@
+.sobre-nos{
+    margin: 0;
+    padding: 60px 70px 60px 70px; 
+    background-color: var(--cor5);
+    width: 100%;
+    height: 100%;
+}
+
+.dorothy, .quem-somos{
+    padding-bottom: 60px;
+}
+
+.dorothy h1, .quem-somos h1, .integrantes h1, .integrantes h2{
+    font-family: var(--font1);
+    font-size: var(--font-size4);
+    font-weight: var(--font-weight1);
+    color: var(--cor2);
+    text-align: start;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.dorothy img{
+    border-radius: 0 0 220px 220px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.dorothy .descricao, .quem-somos .descricao{
+    margin-left: 80px;
+    padding: 30px 15px 20px 15px;
+    background-color: var(--cor7);
+    max-height: 250px;
+}
+
+.dorothy p, .quem-somos p{
+    font-family: var(--font2);
+    font-size: var(--font-size6);
+    font-weight: var(--font-weight2);
+    font-style: italic;
+    color: var(--cor5);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.dorothy p a{
+    font-style: normal;
+    text-decoration: none;
+    color: var(--cor5);
+}
+
+.quem-somos h1{
+    text-align: center;
+}
+
+.quem-somos .descricao{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    max-height: 100%;
+}
+
+.quem-somos .descricao p{
+    color: var(--cor7);
+    font-style: normal;
+    font-size: var(--font-size3);
+    max-width: 680px;
+    height: 100%;
+}
+
+.quem-somos img{
+    width: 80%;
+    height: 80%;
+    border-radius: 0 220px 0 220px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.integrantes{
+    max-width: 1000px;
+}
+
+.integrantes h1{
+    padding: 0;
+}
+
+.integrante{
+    width: 200px;
+    text-align: center;
+}
+
+.integrantes h2{
+    font-size: var(--font-size5);
+    text-align: center;
+    padding: 30px 0 30px 0;
+    margin: 0;
+}
+
+.integrante-image{
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.integrante-nome, .integrante-descricao{
+    font-family: var(--font2);
+    font-size: var(--font-size3);
+    font-weight: var(--font-weight1);
+    color: var(--cor7);
+    text-align: center;
+    padding: 10px 0 10px 0;
+    margin: 0;
+}
+
+.integrante-descricao{
+    font-weight: var(--font-weight2);
+    font-size: var(--font-size6);
+    padding: 0;
+}
+
+.d-flex{
+    align-items: center;
+}
