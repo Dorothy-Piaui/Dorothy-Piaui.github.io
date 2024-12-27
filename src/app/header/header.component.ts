@@ -15,7 +15,9 @@ export class HeaderComponent {
 
   ngOnInit(): void {
     if (window.location.pathname === '/contato' ||
-      window.location.pathname === '/projetos') {
+      window.location.pathname === '/projetos' ||
+      window.location.pathname === '/projetos/cafe-com-tech1' ||
+      window.location.pathname === '/projetos/cafe-com-tech2' ) {
       this.elem.nativeElement.querySelector('.navbar')
         .style.backgroundColor = '#FCE0BD';
 
