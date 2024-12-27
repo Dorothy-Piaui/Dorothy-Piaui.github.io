@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { style } from '@angular/animations';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  constructor(private elem: ElementRef) { }
 
+  ngOnInit(): void {
+    if (window.location.pathname === '/contato' ||
+      window.location.pathname === '/projetos') {
+      this.elem.nativeElement.querySelector('.navbar')
+        .style.backgroundColor = '#FCE0BD';
+
+    }
+  }
 }

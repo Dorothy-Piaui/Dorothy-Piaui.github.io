@@ -22,7 +22,7 @@ header .navbar .container-fluid {
 }
 
 .navbar-nav span a {
-    padding: 0 10px 0 0;
+    padding: 0 20px 0 0;
     position: relative;
     text-decoration: none;
     color: var(--cor1);
