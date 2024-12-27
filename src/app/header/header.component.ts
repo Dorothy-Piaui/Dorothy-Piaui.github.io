@@ -1,4 +1,5 @@
 import { style } from '@angular/animations';
+import { NgStyle } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
 
 @Component({
@@ -8,7 +9,9 @@ import { Component, ElementRef } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  constructor(private elem: ElementRef) { }
+  constructor(
+    private elem: ElementRef
+  ) { }
 
   ngOnInit(): void {
     if (window.location.pathname === '/contato' ||
@@ -16,6 +19,15 @@ export class HeaderComponent {
       this.elem.nativeElement.querySelector('.navbar')
         .style.backgroundColor = '#FCE0BD';
 
+    }else if(window.location.pathname === '/sobre-nos'){
+      this.elem.nativeElement.querySelector('.navbar')
+        .style.backgroundColor = '#8D933E';
+        
+      this.elem.nativeElement.querySelectorAll('.navbar a')
+        .forEach((element: HTMLElement) => {
+          element.style.color = '#FDFDFB';
+        });
     }
+
   }
 }
