@@ -1,0 +1,69 @@
+.projetos{
+    margin: 0;
+    padding: 60px 70px 60px 70px; 
+    background-color: var(--cor5);
+    width: 100%;
+    height: 100%;
+}
+
+.projetos h1, .descricao h2{
+    font-family: var(--font1);
+    font-size: var(--font-size4);
+    font-weight: var(--font-weight1);
+    color: var(--cor1);
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.cafe-1{
+    margin-bottom: 60px;
+}
+
+.cafe-1, .cafe-2{
+    border: 1px solid var(--cor8); 
+    justify-content:space-between;
+    max-width: 1000px;
+}
+
+.descricao{
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 0 30px 0 30px;
+    max-width: 60%;
+}
+
+.descricao h2, .descricao p{
+    padding-bottom: 30px;
+}
+
+.descricao p{
+    font-family: var(--font2);
+    font-size: var(--font-size3);
+    font-weight: var(--font-weight2);
+    color: var(--cor4);
+}
+
+.cafe-1 .banner, .cafe-1{
+    border-top-right-radius: 100px;
+}
+
+.cafe-2 .banner, .cafe-2{
+    border-top-left-radius: 100px;
+}
+
+.cafe-2 button{
+    align-self: flex-end;
+}
+
+.btn{
+    font-size: var(--font-size3);
+    color: var(--cor3) !important;
+    font-family: var(--font1);
+    background-color: var(--cor2);
+    font-weight: var(--font-weight2);
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
