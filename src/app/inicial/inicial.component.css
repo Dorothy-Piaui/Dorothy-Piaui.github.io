@@ -135,6 +135,7 @@ button {
 .participacoes {
     position: relative;
     display: flex;
+    flex-direction: column;
     padding: 60px 70px 60px 70px !important;
     margin: 0;
 }
@@ -168,6 +169,7 @@ button {
 .participacoes img{
     width: 350px;
     height: 350px;
+    object-fit: cover;
 }
 
 .participacoes .card-text{
@@ -178,6 +180,8 @@ button {
     width: 280px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin: 0;
+    justify-self: center;
 }
 
 .participacoes button{

@@ -29,6 +29,14 @@ export class HeaderComponent {
         .forEach((element: HTMLElement) => {
           element.style.color = '#FDFDFB';
         });
+    }else if(window.location.pathname === '/participacoes'){
+      this.elem.nativeElement.querySelector('.navbar')
+        .style.backgroundColor = '#BF213E';
+
+      this.elem.nativeElement.querySelectorAll('.navbar a')
+        .forEach((element: HTMLElement) => {
+          element.style.color = '#FDFDFB';
+        });
     }
 
   }
