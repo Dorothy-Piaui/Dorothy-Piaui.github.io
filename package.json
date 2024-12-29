@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/dorothypiaui.github.io/",
-    "gh-pages": "angular-cli-ghpages --dir=dist/dorothypiaui.github.io",
+    "build": "ng build",
+    "gh-pages": "ng deploy",
     "deploy": "npm run build & npm run gh-pages",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
