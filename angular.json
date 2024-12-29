@@ -3,7 +3,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "dorothypiaui.github.io": {
-      "projectType": "browser",
+      "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
@@ -12,7 +12,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/dorothypiaui.github.io",
+            "outputPath": "docs",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
