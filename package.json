@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href=/dorothypiaui.github.io/",
+    "gh-pages": "angular-cli-ghpages --dir=dist/dorothypiaui.github.io",
+    "deploy": "npm run build & npm run gh-pages",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +23,7 @@
     "@angular/platform-browser": "^19.0.0",
     "@angular/platform-browser-dynamic": "^19.0.0",
     "@angular/router": "^19.0.0",
+    "angular-cli-ghpages": "^2.0.3",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "c": "^1.1.1",
