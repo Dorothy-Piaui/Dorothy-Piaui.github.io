@@ -13,6 +13,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/dorothypiaui.github.io",
+            "baseHref": "/dorothypiaui.github.io/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -89,10 +90,7 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "/dorothypiaui.github.io/",
-            "name": "Dorothy Piaui"  
+          "builder": "angular-cli-ghpages:deploy"
           }        
         }
       }
