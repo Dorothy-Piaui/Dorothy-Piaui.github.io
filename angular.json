@@ -31,13 +31,6 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
-          "deploy": {
-            "builder": "angular-cli-ghpages:deploy",
-            "options": {
-              "baseHref": "https://dorothypiaui.github.io/",
-              "name": "dorothypiaui.github.io"
-            }
-          },
           "configurations": {
             "production": {
               "budgets": [
