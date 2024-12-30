@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,50 +8,31 @@ import { Component, ElementRef } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  constructor(private elem: ElementRef) { }
+  constructor(private elem: ElementRef,
+    private rota: Router
+  ) {
+    rota.events.subscribe(() => {
+      if (rota.url === '/sobre-nos') {
+        this.updateStylesAndIcons('#8D933E');
+      } else if (rota.url === '/participacoes') {
+        this.updateStylesAndIcons('#BF213E');
+      }
+    });
+  }
 
-  get returnaAno() {  
+  get returnaAno() {
     return new Date().getFullYear();
   }
 
-  ngOnInit(): void {
-    if(window.location.pathname === '/sobre-nos'){
-      this.elem.nativeElement.querySelector('footer')
-        .style.backgroundColor = '#8D933E';
-        
-      this.elem.nativeElement.querySelector('.centro p')
-        .style.color = '#FDFDFB';
-        
-      this.elem.nativeElement.querySelector('.instagram')
-        .src = '/assets/images/icons/instagram-white.png';
-      
-      this.elem.nativeElement.querySelector('.linkedin')
-        .src = '/assets/images/icons/linkedin-white.png';
-        
-      this.elem.nativeElement.querySelector('.github')
-        .src = '/assets/images/icons/github-white.png';
-      
-      this.elem.nativeElement.querySelector('.gmail')
-        .src = '/assets/images/icons/gmail-white.png';
-    }else if(window.location.pathname === '/participacoes'){
-      this.elem.nativeElement.querySelector('footer')
-        .style.backgroundColor = '#BF213E';
-        
-      this.elem.nativeElement.querySelector('.centro p')
-        .style.color = '#FDFDFB';
-        
-      this.elem.nativeElement.querySelector('.instagram')
-        .src = '/assets/images/icons/instagram-white.png';
-      
-      this.elem.nativeElement.querySelector('.linkedin')
-        .src = '/assets/images/icons/linkedin-white.png';
-        
-      this.elem.nativeElement.querySelector('.github')
-        .src = '/assets/images/icons/github-white.png';
-      
-      this.elem.nativeElement.querySelector('.gmail')
-        .src = '/assets/images/icons/gmail-white.png';      
-    }
-  }
+  private updateStylesAndIcons(color: string): void {
+    const iconsPath = '/assets/images/icons/';
+    const whiteIconSuffix = '-white.png';
 
+    this.elem.nativeElement.querySelector('footer').style.backgroundColor = color;
+    this.elem.nativeElement.querySelector('.centro p').style.color = '#FDFDFB';
+
+    ['instagram', 'linkedin', 'github', 'gmail'].forEach(icon => {
+      this.elem.nativeElement.querySelector(`.${icon}`).src = `${iconsPath}${icon}${whiteIconSuffix}`;
+    });
+  }
 }

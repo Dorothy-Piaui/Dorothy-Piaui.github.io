@@ -24,8 +24,6 @@ export class AppComponent {
       filter((event) =>
         event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd | any) => {
-        console.log('URL ativa: ', event.url);
-
         switch (event.url) {
           case '/':
             titleService.setTitle('Dorothy Piauí - Página Inicial');
