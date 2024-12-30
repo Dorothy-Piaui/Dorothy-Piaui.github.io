@@ -22,6 +22,8 @@ export class HeaderComponent {
                  rota.url === '/projetos/cafe-com-tech1' ||
                  rota.url === '/projetos/cafe-com-tech2') {
         this.updateNavbarStyles('#FCE0BD', '#BF213E');
+      }else if (rota.url === '/') {
+        this.updateNavbarStyles('', '#BF213E');
       }
     });
   }
