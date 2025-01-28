@@ -22,9 +22,9 @@
     </section>
 
     <section class="realizacoes">
-        <div class="carousel slide" data-bs-ride="carousel">
+        <ngb-carousel class="carousel slide">
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                <ng-template ngbSlide>
                     <div class="card evento1">
                         <div class="banner">
                             <img class="img1" src="/assets/images/realizacoes/bannerCafe1.png" alt="Café com Tech">
@@ -43,8 +43,8 @@
                             </button>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
+                </ng-template>
+                <ng-template ngbSlide>
                     <div class="card evento2">
                         <div class="banner">
                             <img class="img1" src="/assets/images/realizacoes/bannerCafe1.png" alt="Café com Tech">
@@ -62,9 +62,9 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </ng-template>
             </div>
-        </div>
+        </ngb-carousel>
     </section>
 
     <section class="participacoes text-center">
