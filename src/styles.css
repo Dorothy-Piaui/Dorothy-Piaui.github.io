@@ -1,4 +1,4 @@
-@import 'bootstrap';
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 :root {
     --cor1: #BF213E;
