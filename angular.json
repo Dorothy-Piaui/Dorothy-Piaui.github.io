@@ -22,11 +22,10 @@
               "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
-            "assets": [{
-              "glob": "**/*",
-              "input": "src/assets",
-              "output": "/assets"
-            }],
+            "assets": [
+              "src/assets/images/favico.ico",
+              "src/assets"
+            ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
