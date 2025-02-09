@@ -45,3 +45,49 @@ p{
     width: 30px;
     height: 30px;
 }
+
+@media screen and (max-width: 768px){
+    footer{
+        padding: 30px 20px 30px 20px;
+        justify-content: center;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .esquerdo{
+        flex-direction: column;
+    }
+
+    .esquerdo, .centro{
+        padding-bottom: 20px;
+    }
+
+    
+    .direito, .centro{
+        flex-direction: row;        
+    }
+
+    .logo{
+        width: 100%;
+        height: 100%;
+        padding-bottom: 20px;
+    }
+
+    .esquerdo span, .direito span{
+        padding: 0 10px 0 10px;
+    }
+
+    .centro{
+        text-align: center;
+    }
+
+    .icon{
+        width: 50px;
+        height: 50px;
+    }
+    
+}

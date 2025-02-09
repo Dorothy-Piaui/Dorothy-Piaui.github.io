@@ -21,7 +21,17 @@ header .navbar .container-fluid {
     justify-content: center;
 }
 
-.navbar-nav span a {
+.navbar-toggler{
+    border: 0;
+}
+
+.material-icons-outlined{
+    font-size: 30px;
+    color: var(--cor1);
+    background: none;
+}
+
+.nav-link {
     padding: 0 20px 0 0;
     position: relative;
     text-decoration: none;
@@ -29,4 +39,24 @@ header .navbar .container-fluid {
     font-family: var(--font1);
     font-size: var(--font-size2);
     font-weight: var(--font-weight1);
+}
+
+@media screen and (max-width: 768px) {
+    header .navbar {
+        padding: 30px 20px 30px 20px;
+    }
+
+    header .navbar .container-fluid {
+        justify-content: space-between !important;
+    }
+
+    button {
+        color: var(--cor5);
+        border: 0;
+    }
+    
+    .navbar-nav span a {
+        padding: 10px 0 10px 0;
+    }
+    
 }

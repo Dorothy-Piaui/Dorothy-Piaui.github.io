@@ -1,5 +1,3 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
-
 :root {
     --cor1: #BF213E;
     --cor2: #F59520;
@@ -23,6 +21,7 @@
 
     --font-weight1: 500;
     --font-weight2: 400;
+    --font-weight3: 550;
 }
 
 html,
