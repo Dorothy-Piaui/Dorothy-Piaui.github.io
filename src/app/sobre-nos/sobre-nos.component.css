@@ -24,7 +24,6 @@
 }
 
 .dorothy img{
-    border-radius: 0 0 220px 220px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -78,7 +77,6 @@
 .quem-somos img{
     width: 80%;
     height: 80%;
-    border-radius: 0 220px 0 220px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -111,13 +109,14 @@
     height: 150px;
     overflow: hidden;
     border-radius: 50%;
+    object-fit: cover;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .integrante-nome, .integrante-descricao{
     font-family: var(--font2);
     font-size: var(--font-size3);
-    font-weight: var(--font-weight1);
+    font-weight: var(--font-weight3);
     color: var(--cor7);
     text-align: center;
     padding: 10px 0 10px 0;
@@ -132,4 +131,72 @@
 
 .d-flex{
     align-items: center;
+}
+
+@media screen and (max-width: 768px){
+    .sobre-nos{
+        padding: 30px;
+    }
+
+    .d-flex{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .dorothy img{
+        width: 200px;
+        height: 100%;
+        justify-self: center;
+        padding-bottom: 20px;
+    }
+
+    .dorothy .descricao, .quem-somos .descricao{
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .dorothy .descricao{
+        max-height: max-content;
+    }
+
+    .dorothy .descricao p{
+        padding-bottom: 10px !important;
+    }
+
+    .quem-somos img{
+        width: 100%;
+        height: 100%;
+        border-radius: 0 60px 0 60px;
+        padding-top: 20px;
+    }
+
+    .integrante{
+        padding-top: 20px;
+    }   
+
+    .integrante:nth-child(1){
+        padding-top: 0;
+    }    
+
+    .integrante-image{
+        height: 150px;
+        width: 150px;
+        padding-bottom: 10px;
+    }
+
+    .integrante .h3{
+        border-bottom: 10px;
+    }
+
+    .dorothy h1, .quem-somos h1, .integrantes h1, .integrantes h2{        
+        font-size: var(--font-size5);  
+        padding-bottom: 60px;      
+        text-align: center;        
+    }
+    
+    .integrantes h2{
+        padding-bottom: 30px !important;
+    }
+    
+    
 }
