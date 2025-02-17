@@ -28,6 +28,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "c": "^1.1.1",
+    "common": "^0.2.5",
     "Dorothy-Piaui.github.io": "file:",
     "dorothypiaui.github.io": "file:",
     "jquery": "^3.7.1",
