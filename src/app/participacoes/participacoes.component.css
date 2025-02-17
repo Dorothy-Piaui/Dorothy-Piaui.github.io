@@ -1,6 +1,6 @@
 .participacoes{
     margin: 0;
-    padding: 60px 70px 60px 70px; 
+    padding-top: 60px;
     background-color: var(--cor5);
     width: 100%;
     height: 100%;
@@ -24,18 +24,18 @@
 }
 
 .evento{
-    padding-bottom: 60px;
     align-items: center;
-}
-
-.evento:last-child{
-    padding: 0;
+    padding: 60px 70px 60px 70px; 
 }
 
 .evento:nth-child(odd){
-    background-color: var(--cor6);
-    padding: 0;
+    background-color: var(--cor1);
     margin-bottom: 60px;
+}
+
+.evento:nth-child(odd) .descricao, 
+.evento:nth-child(odd) .participacao-titulo{
+    color: var(--cor5);
 }
 
 .descricao{
@@ -46,4 +46,40 @@
     font-weight: var(--font-weight2);
     color: var(--cor4);
     margin: 0 30px 0 30px;
+}
+
+@media screen and (max-width: 768px){
+    h1, .participacao-titulo{
+        font-size: var(--font-size5) !important;
+        padding-bottom: 30px !important;
+    }
+
+    .banner{
+        width: 70%;
+        height: 70%;
+        border-radius: 20px;
+        border: 3px solid var(--cor8);
+        border-right: 6px solid var(--cor8);
+        border-bottom: 6px solid var(--cor8);
+    }    
+
+    .evento{
+        padding: 30px;
+        flex-direction: column-reverse !important;
+        text-align: center;
+    }
+
+    .descricao{
+        max-width: 100%;
+        padding-top: 30px;
+        margin: 0;
+    }
+
+    .evento:nth-child(odd) .banner{
+        margin: 30px;
+    }
+    
+    .evento:nth-child(odd){
+        margin-bottom: 30px;
+    }
 }

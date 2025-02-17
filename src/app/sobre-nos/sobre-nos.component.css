@@ -20,7 +20,7 @@
     font-weight: var(--font-weight1);
     color: var(--cor2);
     text-align: left;
-    width: 100%;
+    width: 100%;    
 }
 
 .dorothy img{
@@ -135,7 +135,7 @@
 
 @media screen and (max-width: 768px){
     .sobre-nos{
-        padding: 30px;
+        padding: 60px 30px 30px 30px;
     }
 
     .d-flex{

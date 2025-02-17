@@ -36,7 +36,7 @@ main{
 }
 
 .welcome .card-text {
-    padding-bottom: 30px;
+    padding-bottom: 30px !important;
     font-size: var(--font-size3);
     color: var(--cor5);
     font-family: var(--font2) !important;
