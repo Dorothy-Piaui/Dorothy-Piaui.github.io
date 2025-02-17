@@ -101,4 +101,57 @@
     font-size: var(--font-size3);
     font-weight: var(--font-weight1);
     padding: 10px 30px 10px 30px;
+    width: 120px;
+    height: 50px;
+    align-self: center;
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        padding: 60px 30px 30px 30px;
+    }
+
+    .container h1{
+        font-size: var(--font-size5);
+    }
+
+    .container h4{
+        font-size: var(--font-size1);
+    }
+
+    .redes{
+        flex-direction: column !important;
+        width: fit-content;
+        align-self: center;
+    }
+
+    .redes .card{
+        padding-top: 30px;
+        border-radius: 10px;
+    }
+
+    .redes .card:first-child{
+        padding-top: 0px;
+    }
+
+    .card img{
+        width: 64px;
+        height: 64px;
+    }
+
+    .card-title , .card-text{
+        font-size: var(--font-size3);
+    }
+
+    .form .d-flex{
+        flex-direction: column !important;    
+        padding-bottom: 0;    
+        align-items: center;
+    }
+
+    .form .d-flex input, 
+    .form .d-flex textarea,
+    .form .d-flex button{
+        margin-top: 10px !important;
+    }
 }
