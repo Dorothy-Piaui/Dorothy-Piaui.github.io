@@ -27,10 +27,8 @@ isMobile: boolean = false;
                  rota.url === '/projetos' ||
                  rota.url === '/projetos/cafe-com-tech1' ||
                  rota.url === '/projetos/cafe-com-tech2' ||
-                (rota.url === '/' && resolucao <= 768)) {
-        this.updateNavbarStyles('#FCE0BD', '#BF213E');          
-      }else if (rota.url === '/') {
-        this.updateNavbarStyles('', '#BF213E');
+                (rota.url === '/' ) ){
+        this.updateNavbarStyles('#FDFDFB', '#BF213E');          
       } 
     });
 
