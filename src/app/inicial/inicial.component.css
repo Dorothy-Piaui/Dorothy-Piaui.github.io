@@ -1,39 +1,33 @@
 main{
     background-color: var(--cor5);
+    padding-bottom: 30px;
 }
 
-/*Cabeçalho*/
-.header-background {
-    position: absolute;
-    inset: 0;
-    size: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(12%) opacity(90%) blur(1px);
 
-}
 
 /*Welcome*/
 .welcome {
-    display: flex;
-    width: fit-content;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 70px 65px 70px;
+    background-image: url('/assets/images/participantes/welcome.jpg');
+    background-size: cover;
+    height: 100%;
+}
+.welcome .card {
+    backdrop-filter: brightness(12%) opacity(90%) blur(1px);
+    padding: 70px;
+    border-radius: 0;
 }
 
-.card {
+.welcome .card, .realizacoes .card{
+    width: 100%;
+    height: 100%;
     display: flex;
-    width: 60%;
-    padding-bottom: 30px;
+    margin: 0;
     background-color: transparent;
     text-align: center;
     border: none;
 }
 
-.card-title {
+.welcome .card-title {
     padding-bottom: 30px;
     font-size: var(--font-size4);
     color: var(--cor1);
@@ -41,16 +35,19 @@ main{
     font-weight: var(--font-weight1);
 }
 
-.card-text {
+.welcome .card-text {
     padding-bottom: 30px;
     font-size: var(--font-size3);
     color: var(--cor5);
     font-family: var(--font2) !important;
     font-weight: var(--font-weight2);
     position: relative;
+    width: 60%;
+    justify-self: center;
+    text-align: center;
 }
 
-button {
+.welcome button {
     font-size: var(--font-size3);
     color: var(--cor3) !important;
     font-family: var(--font1);
@@ -64,7 +61,6 @@ button {
 
 /*Realizações*/
 .realizacoes {
-    position: relative;
     padding: 60px 70px 60px 70px;
     margin: 0;
     background-image: url("/assets/images/onda.png");
@@ -73,27 +69,18 @@ button {
     position: relative;
 }
 
-.realizacoes .carousel-item{
-    display: flex;
-    flex-direction: column;
-}
-.realizacoes .evento1, .evento2{
+.realizacoes .card{
     flex-direction: row;
-    background-color: transparent;
-    border: none;
-    width: 100%;
-    height: 100%;
 }
 
 .realizacoes .card-body{
     display: flex;
     padding-left: 100px; 
-    display: flex !important;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.realizacoes .img1{
+.realizacoes .card .img1{
     width: 300px;
     height: 300px;
     border-radius: 10px !important;
@@ -118,10 +105,10 @@ button {
     text-align: start;
 }
 
-.realizacoes .btn{
+.realizacoes .btn, .participacoes .btn{
     align-self: flex-end;
     font-size: var(--font-size3);
-    color: var(--cor3) !important;
+    color: var(--cor5) !important;
     font-family: var(--font1);
     background-color: var(--cor2);
     font-weight: var(--font-weight1);
@@ -138,6 +125,7 @@ button {
     flex-direction: column;
     padding: 60px 70px 60px 70px !important;
     margin: 0;
+    justify-content: space-between;
 }
 
 .participacoes h1{
@@ -149,47 +137,153 @@ button {
     text-align: start;
 }
 
-.participacoes .card{
-    background-color: var(--cor3);
-    width: 350px;
-    height: fit-content;
-    border-radius: 10px 10px 10px 10px;
-    align-items: center;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.participacoes .card-title{
-    padding-top: 10px !important;
+.participacoes .participacoes-titulo{
+    padding-top: 30px !important;
     font-size: var(--font-size1);
     color: var(--cor1);
     font-family: var(--font1);
     font-weight: var(--font-weight1);
+    margin: 0;
 }
 
-.participacoes img{
-    width: 350px;
-    height: 350px;
+.participacoes-img{
+    width: 500px;
+    height: 500px;
     object-fit: cover;
+    margin: 0;
+    border-radius: 20px;
+    border: 3px solid var(--cor8);
+    border-right: 6px solid var(--cor8);
+    border-bottom: 6px solid var(--cor8);
 }
 
-.participacoes .card-text{
+.participacoes-texto{
     font-size: var(--font-size3);
     color: var(--cor4);
     font-family: var(--font2);
-    font-weight: var(--font-weight2);   
-    width: 280px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-weight: var(--font-weight2);  
+    padding-top: 30px;
+    padding-bottom: 30px;
     margin: 0;
     justify-self: center;
 }
 
-.participacoes button{
-    background-color: transparent;
+.participacoes .btn{
+    background-color: var(--cor1);
+    margin: 0;
 }
 
-.participacoes button svg{
-    color: var(--cor1);
-    width: 30px;
-    height: 30px;
+.participacoes .carousel-control-prev, 
+.participacoes .carousel-control-next{
+    color: var(--cor1) !important;
+    size: 10px;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+    margin: 0 10px 0 10px;
+}
+
+.participacoes .bi{
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 768px){
+    .welcome{
+        padding: 20px 30px 60px 30px;
+    }
+
+    .d-flex{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .card{
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .card-body{
+        padding: 0;
+    }
+
+    .card-title, 
+    .realizacoes .card-title, 
+    .participacoes h1{
+        font-size: var(--font-size5) !important;
+        margin: 0;
+    }
+
+    .card-text{
+        color: var(--cor4);
+        margin: 0;
+    }
+
+    .welcome .card-text{
+        width: 100%;
+        padding: 0;
+    }
+
+    button{
+        margin: 0;
+    }
+
+    .realizacoes, .participacoes{
+        padding: 60px 30px 0 30px !important;
+        margin: 0;
+        background-image: none;
+    }
+
+    .realizacoes .card{
+        flex-direction: column;
+    }
+
+    .realizacoes .img1, 
+    .participacoes-img{
+        width: 70%;
+        height: 70%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .realizacoes .card-body{
+        align-items: center;
+        margin: 5px 0 5px 0;
+        padding-left: 0;
+    }
+
+    .realizacoes .card-text, 
+    .realizacoes .card-title{
+        padding: 30px 0 30px 0;
+        text-align: center;   
+    }
+
+    .realizacoes .card-text{
+        padding-top: 0;
+        text-align: center;   
+    }
+
+    .realizacoes .btn{
+        align-self: center;
+    }
+
+    .participacoes h1{
+        text-align: center;
+    }    
+
+    .participacoes .carousel-inner{
+        width: 70%;
+        margin: 0;
+        justify-self: center;
+    }
+
+    .participacoes .carousel-control-prev,
+    .participacoes .carousel-control-next{
+        margin: 0;
+        width: 30px;
+        height: 30px;
+    }
+    
 }

@@ -1,7 +1,4 @@
 <main>
-    <header>
-        <img loading="lazy" src="/assets/images/participantes/welcome.jpg" class="header-background" alt="" />
-    </header>
 
     <section class="welcome">
         <div class="card text-center">
@@ -21,107 +18,56 @@
         </div>
     </section>
 
-    <section class="realizacoes">
-        <ngb-carousel class="carousel slide">
-            <div class="carousel-inner">
-                <ng-template ngbSlide>
-                    <div class="card evento1">
-                        <div class="banner">
-                            <img class="img1" src="/assets/images/realizacoes/bannerCafe1.png" alt="Café com Tech">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">I Café com Tech</h3>
-                            <p class="card-text">
-                                O I Café com Tecnologia contou com palestras ministradas por profissionais mulheres nas
-                                áreas de
-                                Desenvolvimento, Ciência de Dados, Governança da Internet, Empreendedorismo e Inovação
-                                na
-                                Pesquisa.
-                            </p>
-                            <button type="button" class="btn" [routerLink]="['/projetos/cafe-com-tech1']">
-                                Saiba mais
-                            </button>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template ngbSlide>
-                    <div class="card evento2">
-                        <div class="banner">
-                            <img class="img1" src="/assets/images/realizacoes/bannerCafe1.png" alt="Café com Tech">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">II Café com Tech</h3>
-                            <p class="card-text">
-                                O II Café com Tecnologia contou com palestras ministradas por profissionais mulheres e
-                                estudantes nas áreas de Segurança, Programação Competitiva, Comunidade dev ,
-                                Empreendedorismo e
-                                Inovação na Pesquisa.
-                            </p>
-                            <button type="button" class="btn" [routerLink]="['/projetos/cafe-com-tech2']">
-                                Saiba mais
-                            </button>
-                        </div>
-                    </div>
-                </ng-template>
+    <section class="realizacoes" >
+        <div class="card">
+            <div class="banner">
+                <img class="img1" src="/assets/images/realizacoes/bannerCafe1.png" alt="Café com Tech">
             </div>
-        </ngb-carousel>
+            <div class="card-body">
+                <h1 class="card-title">Realizações</h1>
+                <p class="card-text">
+                    Pensando em como promover a maior inclusão na área de tecnologia e inovação, foi criado o Café Tech.
+                    Esse projeto é recheado de palestras, bate-papos, histórias de superação, anúncio de eventos e,
+                    claro, café.
+                </p>
+                <button type="button" class="btn" [routerLink]="['/projetos']">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
     </section>
 
     <section class="participacoes text-center">
         <h1>Participações em eventos</h1>
-        <div class="eventos d-flex flex-row justify-content-around">
-            <div class="card">
-                <img class="row" src="assets/images/eventos/snct.png" alt="SNCT">
-                <div class="card-body">
-                    <h5 class="card-title">20&#170; Semana Nacional de Ciência e Tecnologia</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet gravida
-                        fermentum. Vestibulum dapibus eros dictum tortor maximus laoreet.
-                    </p>
-                    <button type="button" class="btn" [routerLink]="['/participacoes']">
-                        <svg xmlns="/assets/images/icons/arrow-right.svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                        </svg>
-                    </button>
-                </div>
 
-            </div>
-            <div class="card">
-                <img class="row cpweekend" src="assets/images/eventos/CPWeekendPI.jpg" alt="CPWeekend Piauí 2024">
-                <div class="card-body">
-                    <h5 class="card-title">Campus Weekend Piauí 2024</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet gravida
-                        fermentum. Vestibulum dapibus eros dictum tortor maximus laoreet.
-                    </p>
-                    <button type="button" class="btn" [routerLink]="['/participacoes']">
-                        <svg xmlns="/assets/images/icons/arrow-right.svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                        </svg>
-                    </button>
+        <div id="carouselParticipacoes" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div *ngFor="let evento of eventos; let i = index" class="carousel-item" [class.active]="i == 0">
+                    <img class="participacoes-img" src="{{evento.imagem}}" alt="{{evento.titulo}}">
+                    <div class="caption-container">
+                        <h5 class="participacoes-titulo">{{evento.titulo}}</h5>
+                        <p class="participacoes-texto">{{evento.descricao}}</p>
+                        <button type="button" class="btn participacoes-btn" [routerLink]="['/eventos']">
+                            Saiba mais  
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img class="row" src="assets/images/eventos/SD-Estácio-The.png" alt="II Semana da Diversidade da Estácio Teresina">
-                <div class="card-body">
-                    <h5 class="card-title">II Semana da Diversidade da Estácio Teresina</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam laoreet gravida
-                        fermentum. Vestibulum dapibus eros dictum tortor maximus laoreet.
-                    </p>
-                    <button type="button" class="btn"  [routerLink]="['/participacoes']">
-                        <svg xmlns="/assets/images/icons/arrow-right.svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-arrow-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+            <button type="button" class="btn carousel-control-next"  data-bs-target="#carouselParticipacoes" data-bs-slide="next">
+                <svg xmlns="/assets/images/icons/arrow-right.svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-rigth" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+            </button>
+
+            <button type="button" class="btn carousel-control-prev" data-bs-target="#carouselParticipacoes" data-bs-slide="prev">
+                <svg xmlns="/assets/images/icons/arrow-left.svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-left" viewBox="0 0 16 16">                    
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                </svg>
+            </button>
+
+          </div>
+        
     </section>
 </main>
