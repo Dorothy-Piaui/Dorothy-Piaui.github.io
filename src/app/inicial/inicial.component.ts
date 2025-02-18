@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink} from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { enableDebugTools } from '@angular/platform-browser';
 
 interface Eventos {
   titulo: string;
@@ -63,7 +62,7 @@ export class InicialComponent {
         titulo: 'II Semana da Diversidade da Estácio Teresina',
         descricao: 'A Semana da Diversidade é um evento que tem como objetivo promover a integração entre os alunos' +
         'dos cursos de Tecnologia da Informação e a comunidade externa.',
-        imagem: 'assets/images/eventos/SD-Estácio-The.png'
+        imagem: 'assets/images/eventos/SD-Estácio-The.png',        
       }
       
     ];

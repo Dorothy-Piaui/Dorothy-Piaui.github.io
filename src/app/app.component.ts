@@ -6,6 +6,7 @@ import { Title } from '@angular/platform-browser';
 import { NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
 
+
 @Component({
   selector: 'app-root',
   imports: [
@@ -14,7 +15,7 @@ import { filter } from 'rxjs';
     FooterComponent
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'Dorothy Piauí';
@@ -30,13 +31,13 @@ export class AppComponent {
             break;
 
           case '/sobre-nos':
-            titleService.setTitle('Dorothy Piauí - Sobre nós');	
+            titleService.setTitle('Dorothy Piauí - Sobre nós');
             break;
 
           case '/contato':
             titleService.setTitle('Dorothy Piauí - Contato');
             break;
-            
+
           case '/projetos':
             titleService.setTitle('Dorothy Piauí - Projetos');
             break;
@@ -44,7 +45,7 @@ export class AppComponent {
           case '/participacoes':
             titleService.setTitle('Dorothy Piauí - Participações');
             break;
-          
+
           default:
             titleService.setTitle('Dorothy Piauí');
             break;

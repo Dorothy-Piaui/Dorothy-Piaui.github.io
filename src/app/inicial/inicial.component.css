@@ -64,6 +64,8 @@ main{
     padding: 60px 70px 60px 70px;
     margin: 0;
     background-image: url("/assets/images/onda.png");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     position: relative;
 }
