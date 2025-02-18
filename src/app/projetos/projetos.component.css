@@ -67,3 +67,49 @@
     border-radius: 10px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
+@media screen and (max-width: 768px){
+    .projetos{
+        padding: 60px 30px 30px 30px;
+    }
+
+    h1, 
+    .descricao h2{
+        padding-bottom: 30px !important;
+        font-size: var(--font-size5) !important;
+    }
+
+    .cafe-1, .cafe-2{
+        border-radius: 0  !important;
+        border: 0 !important;
+        background-color: var(--cor6);
+        padding: 30px 0 30px 0 !important;
+    }
+
+    .cafe-1 .d-flex,
+    .cafe-2 .d-flex{
+        flex-direction: column-reverse !important;        
+        text-align: center;
+        align-items: center !important;
+    }
+    .cafe-2 .d-flex{
+        flex-direction: column !important;
+    }
+
+    .cafe-1 .descricao,
+    .cafe-2 .descricao{
+        flex-direction: column !important;     
+        padding-bottom: 0;         
+    }
+
+    .cafe-2 button{
+        align-self: center;
+    }
+
+    .cafe-1 .banner, .cafe-2 .banner{
+        border-radius: 10px;
+        border: 2px solid var(--cor8);
+        width: 70%;
+        height: 70%;
+    }
+}

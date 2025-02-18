@@ -135,3 +135,82 @@
     padding-top: 30px;
     width: 330px;
 }
+
+@media screen and (max-width: 768px) {
+    .cafe-2 {
+        padding: 60px 30px 40px 30px;
+    }
+
+    .cafe-2 h1,
+    .cronograma h1 {
+        font-size: var(--font-size5) !important;
+    }
+
+    .cafe-2 .cafe {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .cafe-2 .infos {
+        justify-items: center !important;
+    }
+
+    .cafe-2 .data,
+    .cafe-2 .horario,
+    .cafe-2 .local,
+    .cafe-2 .publico {
+        flex-direction: row !important;
+    }
+
+    .cafe-2 .banner {
+        border-radius: 10px !important;
+        border: 2px solid var(--cor8);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        width: 70%;
+        height: 70%;
+        align-self: center;
+        margin-bottom: 60px !important;
+    }
+
+    .descricao,
+    .infos,
+    .cronograma {
+        width: 100%;
+    }
+
+    .cronograma .horario {
+        flex-direction: column !important;
+        padding-bottom: 15px;
+    }
+
+    .cronograma .horario .d-flex {
+        padding: 10px;
+    }
+
+    .cronograma .hora,
+    .cronograma .atividade {
+        border: 0;
+        align-items: center;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .cronograma .hora {
+        margin-right: 15px !important;
+    }
+
+    .cronograma .item {
+        background-color: var(--cor6);
+        border: 2px solid var(--cor8);
+        border-bottom: 3px solid var(--cor8);
+        border-radius: 10px;
+        align-items: center;
+        margin: 10px !important;
+    }
+
+    .patrocinadores-image {
+        align-items: center !important;
+        justify-content: space-between;
+        height: 60%;
+    }
+}

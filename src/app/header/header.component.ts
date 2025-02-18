@@ -26,10 +26,11 @@ isMobile: boolean = false;
       } else if (rota.url === '/contato' ||
                  rota.url === '/projetos' ||
                  rota.url === '/projetos/cafe-com-tech1' ||
-                 rota.url === '/projetos/cafe-com-tech2' ||
-                (rota.url === '/' ) ){
-        this.updateNavbarStyles('#FDFDFB', '#BF213E');          
-      } 
+                 rota.url === '/projetos/cafe-com-tech2'){
+        this.updateNavbarStyles('#FCE0BD', '#BF213E');          
+      } else if (rota.url === '/' ) {
+        this.updateNavbarStyles('#FDFDFB', '#BF213E');
+      }
     });
 
     window.onload = () => {
