@@ -144,10 +144,11 @@
     }
 
     .dorothy img{
-        width: 200px;
-        height: 100%;
+        width: 70%;
+        height: 50%;
         justify-self: center;
         padding-bottom: 20px;
+        border-radius:  0 0 100% 100%;
     }
 
     .dorothy .descricao, .quem-somos .descricao{
@@ -179,8 +180,8 @@
     }    
 
     .integrante-image{
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
         padding-bottom: 10px;
     }
 
@@ -188,7 +189,10 @@
         border-bottom: 10px;
     }
 
-    .dorothy h1, .quem-somos h1, .integrantes h1, .integrantes h2{        
+    .dorothy h1, 
+    .quem-somos h1, 
+    .integrantes h1, 
+    .integrantes h2{        
         font-size: var(--font-size5);  
         padding-bottom: 60px;      
         text-align: center;        
@@ -197,6 +201,4 @@
     .integrantes h2{
         padding-bottom: 30px !important;
     }
-    
-    
 }
