@@ -17,7 +17,6 @@ isMobile: boolean = false;
     private rota: Router
   ) {
     rota.events.subscribe(() => {
-      const resolucao = window.innerWidth;
 
       if (rota.url === '/sobre-nos') {
         this.updateNavbarStyles('#8D933E', '#FDFDFB');
