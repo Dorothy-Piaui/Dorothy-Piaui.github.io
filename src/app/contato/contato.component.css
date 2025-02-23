@@ -127,11 +127,15 @@
 
     .redes .card{
         padding-top: 30px;
-        border-radius: 10px;
     }
 
     .redes .card:first-child{
         padding-top: 0px;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .redes .card:last-child{
+        border-radius: 0 0 10px 10px;
     }
 
     .card img{
@@ -153,5 +157,6 @@
     .form .d-flex textarea,
     .form .d-flex button{
         margin-top: 10px !important;
+        width: fit-content;
     }
 }

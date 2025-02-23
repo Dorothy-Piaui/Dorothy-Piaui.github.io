@@ -16,7 +16,10 @@ export class FooterComponent {
         this.updateStylesAndIcons('#8D933E');
       } else if (rota.url === '/participacoes') {
         this.updateStylesAndIcons('#BF213E');
-      } else {
+
+      } else if (rota.url === '/projetos' ||
+        rota.url === '/projetos/cafe-com-tech1' ||
+        rota.url === '/projetos/cafe-com-tech2') {
         this.updateStylesAndIcons('#FCE0BD');
       }
     });

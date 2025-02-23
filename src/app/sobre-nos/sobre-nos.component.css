@@ -94,6 +94,7 @@
 
 .integrantes{
     width: 100%;
+    display: none !important;
 }
 
 .integrantes h1{

@@ -20,9 +20,9 @@
         </div>
     </div>
 
-    <div class="quem-somos d-flex flex-column align-items-center">
+    <div class="quem-somos d-flex flex-column align-items-center" [hidden]="true">
         <h1>Quem somos?</h1>
-        <div class="descricao">
+        <div class="descricao" [hidden]="true">
             <p class="pb-2">
                 Lorem ipsum dolor sit amet consectetur. Amet tellus dignissim magna varius. Vitae interdum neque
                 pellentesque id arcu etiam. Dictum blandit felis tempus tellus ac fringilla. Cursus nunc massa
@@ -41,13 +41,13 @@
             alt="Integrantes no evento Café com Tech II">
     </div>
 
-    <div class="integrantes d-flex flex-column align-items-center">
+    <div class="integrantes d-flex flex-column align-items-center"  >
         <h1>Integrantes</h1>
 
         <h2>Diretoria Geral</h2>
 
-        <div class="geral d-flex flex-row justify-content-between">
-            <div class="integrante d-flex flex-column align-items-center">
+        <div class="geral d-flex flex-row justify-content-between" >
+            <div class="integrante d-flex flex-column align-items-center" [hidden]="true">
                 <div class="integrante-image">
                     <img src="assets/images/participantes/larissa-brasil.jpg" alt="Larissa Brasil" width="150px">
                 </div>
@@ -57,7 +57,7 @@
                     netus vitae convallis risus. Hac turpis orci a id orci.
                 </p>
             </div>
-            <div class="integrante d-flex flex-column align-items-center mx-4">
+            <div class="integrante d-flex flex-column align-items-center mx-4" [hidden]="true">
                 <div class="integrante-image">
                     <img src="assets/images/participantes/Suzana-Silva.jpg" alt="Suzana Silva" width="150px">
                 </div>
@@ -67,7 +67,7 @@
                     netus vitae convallis risus. Hac turpis orci a id orci.
                 </p>
             </div>
-            <div class="integrante d-flex flex-column align-items-center">
+            <div class="integrante d-flex flex-column align-items-center" [hidden]="true">
                 <div class="integrante-image">
                     <img src="assets/images/participantes/Thayssa-Fernanda-Rodrigues-Alves.jpg" alt="Thayssa Fernanda"
                         width="150px">
