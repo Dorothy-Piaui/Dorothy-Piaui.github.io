@@ -1,4 +1,9 @@
-# DorothypiauiGithubIo
+# Dorothy Piauí
+O site Dorothy Piauí, uma plataforma criada para divulgar o projeto que valoriza e visibiliza a atuação de mulheres na tecnologia.
+
+O site foi construído com foco em acessibilidade, navegação intuitiva e identidade visual alinhada ao propósito social do projeto. Ele reúne conteúdos semanais sobre mulheres da tecnologia, além de informações sobre ações do projeto, eventos e materiais educativos.
+
+Tecnologias utilizadas: HTML, CSS, JavaScript e GitHub Pages para hospedagem.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
