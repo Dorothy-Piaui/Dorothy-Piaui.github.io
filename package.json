@@ -27,7 +27,6 @@
     "angular-cli-ghpages": "^2.0.3",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "c": "^1.1.1",
     "common": "^0.2.5",
     "Dorothy-Piaui.github.io": "file:",
     "dorothypiaui.github.io": "file:",
@@ -39,7 +38,7 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.0.6",
+    "@angular-devkit/build-angular": "^19.2.11",
     "@angular/compiler-cli": "^19.0.0",
     "@angular/localize": "^19.0.0",
     "@types/jasmine": "~5.1.0",
