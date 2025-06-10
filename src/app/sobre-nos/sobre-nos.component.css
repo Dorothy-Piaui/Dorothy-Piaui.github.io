@@ -1,6 +1,6 @@
 .sobre-nos{
     margin: 0;
-    padding: 60px 70px 60px 70px; 
+    padding: 60px 70px 60px 70px;
     background-color: var(--cor5);
     width: 100%;
     height: 100%;
@@ -25,13 +25,13 @@
     font-weight: var(--font-weight1);
     color: var(--cor2);
     text-align: left;
-    width: 100%;    
+    width: 100%;
 }
 
 .dorothy img{
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius:  0 0 100% 100%;
-    width: 80%;    
+    width: 80%;
     height: 80%;
 }
 
@@ -94,7 +94,7 @@
 
 .integrantes{
     width: 100%;
-    display: none !important;
+    /* display: none !important; */
 }
 
 .integrantes h1{
@@ -142,6 +142,15 @@
     align-items: center;
 }
 
+.integrantes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    justify-items: center;
+    margin-bottom: 2rem;
+}
+
 @media screen and (max-width: 768px){
     .sobre-nos{
         padding: 60px 30px 30px 30px;
@@ -182,11 +191,11 @@
 
     .integrante{
         padding-top: 20px;
-    }   
+    }
 
     .integrante:nth-child(1){
         padding-top: 0;
-    }    
+    }
 
     .integrante-image{
         height: 100px;
@@ -198,16 +207,27 @@
         border-bottom: 10px;
     }
 
-    .dorothy h1, 
-    .quem-somos h1, 
-    .integrantes h1, 
-    .integrantes h2{        
-        font-size: var(--font-size5);  
-        padding-bottom: 60px;      
-        text-align: center;        
+    .dorothy h1,
+    .quem-somos h1,
+    .integrantes h1,
+    .integrantes h2{
+        font-size: var(--font-size5);
+        padding-bottom: 60px;
+        text-align: center;
     }
-    
+
     .integrantes h2{
         padding-bottom: 30px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .integrantes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .integrantes-grid {
+        grid-template-columns: 1fr;
     }
 }
