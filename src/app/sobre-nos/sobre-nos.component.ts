@@ -101,13 +101,13 @@ export class SobreNosComponent {
     {
       nome: 'Laura Aparecida',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/LAURA-APARECIDA-silva.webp`,
+      imagem: `${this.imagens}/laura-aparecida.webp`,
       descricao: this.mapToDescricao('Laura Aparecida'),
     },
     {
       nome: 'Lúcia de Fátima',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/Lúcia-de-Fátima-Martins.JPEG`,
+      imagem: `${this.imagens}/lucia-de-fatima.JPEG`,
       descricao: this.mapToDescricao('Lúcia de Fátima'),
     },
     {
@@ -125,19 +125,19 @@ export class SobreNosComponent {
     {
       nome: 'Nicole Ellen',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/Nicole-M.-Silvestre.webp`,
+      imagem: `${this.imagens}/nicole-silvestre.webp`,
       descricao: this.mapToDescricao('Nicole Ellen'),
     },
     {
       nome: 'Talita Matos',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: 'assets/images/icons/talita-matos.jpeg',
+      imagem: `${this.imagens}/talita-matos.jpg`,
       descricao: this.mapToDescricao('Talita Matos'),
     },
     {
       nome: 'Carol Santos',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/Carol-Santos.jpg`,
+      imagem: `${this.imagens}/carol-santos.jpg`,
       descricao: this.mapToDescricao('Carol Santos'),
     },
 
