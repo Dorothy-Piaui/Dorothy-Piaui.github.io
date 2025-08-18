@@ -90,7 +90,7 @@ export class SobreNosComponent {
     {
       nome: 'Suzana Silva',
       diretoria: this.mapToCargo(Diretoria.GERAL),
-      imagem: `${this.imagens}/Suzana-Silva.jpg`,
+      imagem: `${this.imagens}/suzana-silva.jpg`,
       descricao: this.mapToDescricao('Suzana Silva'),
     },
     {
@@ -116,7 +116,7 @@ export class SobreNosComponent {
     {
       nome: 'Laura Aparecida',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/laura-aparecida.webp`,
+      imagem: `${this.imagens}/laura-aparecida.jpg`,
       descricao: this.mapToDescricao('Laura Aparecida'),
     },
     {
@@ -128,19 +128,19 @@ export class SobreNosComponent {
     {
       nome: 'Maria Ingrid',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/Maria-Ingrid.jpg`,
+      imagem: `${this.imagens}/maria-ingrid.jpg`,
       descricao: this.mapToDescricao('Maria Ingrid'),
     },
     {
       nome: 'Monnik Luianne',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/Monnik-Luianne.webp`,
+      imagem: `${this.imagens}/monnik-luianne.jpg`,
       descricao: this.mapToDescricao('Monnik Luianne'),
     },
     {
       nome: 'Nicole Ellen',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/nicole-silvestre.webp`,
+      imagem: `${this.imagens}/nicole-silvestre.jpg`,
       descricao: this.mapToDescricao('Nicole Ellen'),
     },
     {
@@ -160,7 +160,7 @@ export class SobreNosComponent {
     {
       nome: 'Arielly Cristiny',
       diretoria: this.mapToCargo(Diretoria.EXTENSAO_EVENTOS),
-      imagem: `${this.imagens}/Arielly-Cristiny.jpeg`,
+      imagem: `${this.imagens}/arielly-cristiny.jpeg`,
       descricao: this.mapToDescricao('Arielly Cristiny'),
     },
 
@@ -176,15 +176,15 @@ export class SobreNosComponent {
     {
       nome: 'Ana Beatriz',
       diretoria: this.mapToCargo(Diretoria.PRODUTOS),
-      imagem: `${this.imagens}/Ana-Beatriz.jpg`,
+      imagem: `${this.imagens}/ana-beatriz.jpg`,
       descricao: this.mapToDescricao('Ana Beatriz'),
     },
     // Diretoria de Conexão e Projetos
     {
-      nome: 'Diana',
+      nome: 'Diana Brito',
       diretoria: this.mapToCargo(Diretoria.CONEXAO_PROJETOS),
       imagem: `${this.imagens}/diana.jpg`,
-      descricao: this.mapToDescricao('Diana'),
+      descricao: this.mapToDescricao('Diana Brito'),
     },
   ];
 
