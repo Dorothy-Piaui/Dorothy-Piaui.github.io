@@ -4,10 +4,9 @@ footer {
     background-color: var(--cor6);
 }
 
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -15,7 +14,8 @@ footer {
 
 .esquerdo, .direito, .centro{
     display: flex;
-    flex-direction: row;
+    width: 100%;
+    align-items: center;
 }
 
 .logo{
@@ -46,48 +46,70 @@ p{
     height: 30px;
 }
 
-@media screen and (max-width: 768px){
-    footer{
-        padding: 30px 20px 30px 20px;
-        justify-content: center;
+@media screen and (max-width: 992px) {
+    .footer {
+        gap: 0.5rem;
     }
-    
-    .container{
-        display: flex;
+
+    .centro {
+        font-size: calc(var(--font-size3) - 2px);
+    }
+}
+
+/* Dispositivos móveis maiores */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 30px 20px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 1.5rem;
+    }
+
+    .esquerdo,
+    .centro,
+    .direito {
+        justify-content: center !important;
+        padding-bottom: 0;
+    }
+
+    .esquerdo {
         flex-direction: column;
-        align-items: center;
     }
 
-    .esquerdo{
-        flex-direction: column;
+    .logo {
+        max-width: 200px;
+        margin-bottom: 15px;
     }
 
-    .esquerdo, .centro{
-        padding-bottom: 20px;
+    .esquerdo span,
+    .direito span {
+        padding: 0 10px;
     }
 
-    
-    .direito, .centro{
-        flex-direction: row;        
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    footer {
+        padding: 20px 15px;
     }
 
-    .logo{
-        width: 100%;
-        height: 100%;
-        padding-bottom: 20px;
+    .icon {
+        width: 35px;
+        height: 35px;
     }
 
-    .esquerdo span, .direito span{
-        padding: 0 10px 0 10px;
+    .centro {
+        font-size: calc(var(--font-size3) - 4px);
     }
 
-    .centro{
-        text-align: center;
+    .footer {
+        gap: 1rem;
     }
-
-    .icon{
-        width: 50px;
-        height: 50px;
-    }
-    
 }

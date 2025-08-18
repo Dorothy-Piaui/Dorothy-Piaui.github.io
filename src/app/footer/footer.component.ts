@@ -13,14 +13,14 @@ export class FooterComponent {
   ) {
     rota.events.subscribe(() => {
       if (rota.url === '/sobre-nos') {
-        this.updateStylesAndIcons('#8D933E');
+        this.updateStylesAndIcons('#8D933E', '#FDFDFB', 'white');
       } else if (rota.url === '/participacoes') {
-        this.updateStylesAndIcons('#BF213E');
+        this.updateStylesAndIcons('#BF213E', '#FDFDFB', 'white');
 
       } else if (rota.url === '/projetos' ||
         rota.url === '/projetos/cafe-com-tech1' ||
         rota.url === '/projetos/cafe-com-tech2') {
-        this.updateStylesAndIcons('#FCE0BD');
+        this.updateStylesAndIcons('#FCE0BD', '#BF213E', 'red');
       }
     });
   }
@@ -29,15 +29,22 @@ export class FooterComponent {
     return new Date().getFullYear();
   }
 
-  private updateStylesAndIcons(color: string): void {
+  private updateStylesAndIcons(color: string, fontColor: string, iconColor: string): void {
     const iconsPath = '/assets/images/icons/';
-    const whiteIconSuffix = '-white.png';
+
+    let iconColorSuffix: string;
+
+    if(iconColor === 'white') {
+      iconColorSuffix = '-white.png';
+    } else if(iconColor === 'red') {
+      iconColorSuffix = '-red.png';
+    }
 
     this.elem.nativeElement.querySelector('footer').style.backgroundColor = color;
-    this.elem.nativeElement.querySelector('.centro p').style.color = '#FDFDFB';
+    this.elem.nativeElement.querySelector('.centro p').style.color = fontColor;
 
     ['instagram', 'linkedin', 'github', 'gmail'].forEach(icon => {
-      this.elem.nativeElement.querySelector(`.${icon}`).src = `${iconsPath}${icon}${whiteIconSuffix}`;
+      this.elem.nativeElement.querySelector(`.${icon}`).src = `${iconsPath}${icon}${iconColorSuffix}`;
     });
   }
 }
