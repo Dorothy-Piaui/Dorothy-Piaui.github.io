@@ -19,7 +19,8 @@ export class FooterComponent {
 
       } else if (rota.url === '/projetos' ||
         rota.url === '/projetos/cafe-com-tech1' ||
-        rota.url === '/projetos/cafe-com-tech2') {
+        rota.url === '/projetos/cafe-com-tech2' ||
+        rota.url === '/contato') {
         this.updateStylesAndIcons('#FCE0BD', '#BF213E', 'red');
       }
     });
