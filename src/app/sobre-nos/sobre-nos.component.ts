@@ -77,6 +77,11 @@ export class SobreNosComponent {
         'Aluna de Ciência da Computação na UFPI, técnico em informática e aspirante a escritora. Atualmente busca a área de ciência de dados no ramo forense.',
       participante: 'Thayssa Fernanda',
     },
+    {
+      texto:
+      'Arquiteta de Soluções Backend, gosto de compartilhar conhecimento e explorar novas tecnologias. Sou fã de esportes e mãe de pet.',
+      participante: 'Adélia Mara'
+    }
   ];
 
   participantes: Participante[] = [
