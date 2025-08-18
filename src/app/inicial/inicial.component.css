@@ -32,6 +32,10 @@ main {
     justify-content: center;
 }
 
+.welcome .card .card-body .btn{
+    color: var(--cor5) !important;
+}
+
 .welcome .card, .realizacoes .card {
     width: 100%;
     display: flex;

@@ -58,7 +58,7 @@
 
 .btn{
     font-size: var(--font-size3);
-    color: var(--cor3) !important;
+    color: var(--cor5) !important;
     font-family: var(--font1);
     background-color: var(--cor2);
     font-weight: var(--font-weight2);
