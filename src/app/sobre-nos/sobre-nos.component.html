@@ -1,126 +1,104 @@
 <div class="sobre-nos d-flex flex-column">
-    <div class="dorothy d-flex flex-column">
-        <h1>Quem foi Dorothy Vaughan?</h1>
-        <div class="d-flex bloco flex-row justify-content-between">
-            <img src="assets/images/Dorothy-Vaughan.jpg" alt="Dorothy Vaughan" width="400px" height="400px">
-            <div class="d-flex flex-column descricao align-self-baseline">
-                <p class="pb-2">
-                    “Em uma era em que a NASA é liderada por um homem afro-americano (Charles Bolden) e uma mulher
-                    (Administradora Adjunta Dava Newman), e quando os Diretores de Centro da NASA recentes vêm de uma
-                    variedade de origens, é fácil ignorar as pessoas que pavimentaram o caminho para a atual força de
-                    trabalho e liderança robusta e diversificada da agência. Aqueles que falam dos pioneiros da NASA
-                    raramente mencionam o nome Dorothy Vaughan, mas como chefe da Unidade de Computação da Área Oeste
-                    segregada do Comitê Consultivo Nacional para Aeronáutica (NACA) de 1949 a 1958, Vaughan foi um
-                    matemático respeitado e o primeiro gerente afro-americano da NASA.”
-                </p>
-                <p class="text-end">
-                    <a href="https://www.nasa.gov/people/dorothy-vaughan/" target="_blank">www.nasa.gov/people/dorothy-vaughan</a>
-                </p>
-            </div>
-        </div>
+  <div class="dorothy d-flex flex-column">
+    <h1>Quem foi Dorothy Vaughan?</h1>
+    <div class="d-flex bloco flex-row justify-content-between">
+      <img
+        src="assets/images/Dorothy-Vaughan.jpg"
+        alt="Dorothy Vaughan"
+        width="400px"
+        height="400px"
+      />
+      <div class="d-flex flex-column descricao align-self-baseline">
+        <p class="pb-2">
+          “Em uma era em que a NASA é liderada por um homem afro-americano
+          (Charles Bolden) e uma mulher (Administradora Adjunta Dava Newman), e
+          quando os Diretores de Centro da NASA recentes vêm de uma variedade de
+          origens, é fácil ignorar as pessoas que pavimentaram o caminho para a
+          atual força de trabalho e liderança robusta e diversificada da
+          agência. Aqueles que falam dos pioneiros da NASA raramente mencionam o
+          nome Dorothy Vaughan, mas como chefe da Unidade de Computação da Área
+          Oeste segregada do Comitê Consultivo Nacional para Aeronáutica (NACA)
+          de 1949 a 1958, Vaughan foi um matemático respeitado e o primeiro
+          gerente afro-americano da NASA.”
+        </p>
+        <p class="text-end">
+          <a href="https://www.nasa.gov/people/dorothy-vaughan/" target="_blank"
+            >www.nasa.gov/people/dorothy-vaughan</a
+          >
+        </p>
+      </div>
     </div>
+  </div>
 
-    <div class="quem-somos d-flex flex-column align-items-center" >
-        <h1>Quem somos?</h1>
-        <div class="descricao">
-            <p class="pb-2">
-                Lorem ipsum dolor sit amet consectetur. Amet tellus dignissim magna varius. Vitae interdum neque
-                pellentesque id arcu etiam. Dictum blandit felis tempus tellus ac fringilla. Cursus nunc massa
-                rhoncus faucibus ultrices id psan magna adipiscing. Iaculis arcu amet suspendisse ac odio. Ultrices
-                bibendum tristique sit massa et. Ullamcorper duis vitae mi facilisis convallis ut.
+  <div class="quem-somos d-flex flex-column align-items-center">
+    <h1>Quem somos?</h1>
+    <div class="descricao">
+      <p class="pb-2">
+        O Dorothy Piauí é um projeto que nasceu com a missão de dar visibilidade
+        às mulheres que revolucionaram — e continuam revolucionando — a
+        tecnologia. Inspirado pela trajetória de Dorothy Vaughan, matemática e
+        cientista da computação que abriu caminhos na NASA, o projeto busca
+        quebrar estereótipos e construir espaços mais justos, diversos e
+        representativos dentro da ciência e da tecnologia.
+      </p>
+      <p>
+        Acreditamos no poder da educação, da representatividade e da comunidade.
+        Por isso, atuamos em múltiplas frentes: desde a produção de conteúdo
+        informativo nas redes sociais, até a realização de palestras, rodas de
+        conversa e oficinas interativas com foco em empoderamento feminino,
+        história da tecnologia e inclusão digital.
+      </p>
+      <p>
+        Com uma abordagem acessível e colaborativa, o Dorothy Piauí busca
+        inspirar novas gerações de meninas e mulheres a se reconhecerem como
+        protagonistas no campo da tecnologia, além de provocar reflexões
+        necessárias sobre igualdade de gênero e inovação.
+      </p>
+      <p>
+        Somos resistência, criatividade e transformação — e estamos só começando.
+      </p>
+    </div>
+    <img
+      class="integrantes-foto"
+      src="assets/images/participantes/welcome.jpg"
+      alt="Integrantes no evento Café com Tech II"
+    />
+  </div>
+
+  <div class="integrantes d-flex flex-column align-items-center">
+    <h1>Integrantes</h1>
+
+    <ng-container *ngFor="let diretoria of diretorias; let i = index">
+      <h2>
+        {{
+          diretoria === 'Diretor Geral' ? 'Diretoria Geral' :
+          diretoria === 'Diretor de Imprensa' ? 'Diretoria de Imprensa' :
+          diretoria === 'Diretor de Extensão e Eventos' ? 'Diretoria de Extensão e Eventos' :
+          diretoria === 'Diretor Financeiro' ? 'Diretoria Financeira' :
+          diretoria === 'Diretor de Produtos' ? 'Diretoria de Produtos':
+          'Diretoria de Conexão de Projetos'
+        }}
+      </h2>
+      <div class="integrantes-grid">
+        <ng-container *ngFor="let participante of participantes">
+          <div
+            class="integrante d-flex flex-column align-items-center"
+            *ngIf="participante.diretoria === diretoria"
+          >
+            <div class="integrante-image">
+              <img
+                [src]="participante.imagem"
+                [alt]="participante.nome"
+                width="150px"
+              />
+            </div>
+            <h3 class="integrante-nome">{{ participante.nome }}</h3>
+            <p class="integrante-descricao">
+              {{ participante.descricao }}
             </p>
-            <p>
-                Feugiat eget duis cursus convallis viverra sed natoque nunc. Lectus sed nunc aliquet in feugiat
-                mattis. Rhoncus semper felis lacus condimentum. Lorem posuere placerat quis egestas. Malesuada
-                rhoncus lectus malesuada nec eget tempor. Tellus auctor nisl et semper nunc ut. Natoque tellus
-                tristique lobortis commodo. Senectus orci et nunc ornare. Odio faucibus arcu dolor convallis
-                ultrices pulvinar. Quisque commodo vitae sit proin sem id sagittis velit.
-            </p>
-        </div>
-        <img class="integrantes-foto" src="assets/images/participantes/welcome.jpg"
-            alt="Integrantes no evento Café com Tech II">
-    </div>
-
-    <div class="integrantes d-flex flex-column align-items-center">
-      <h1>Integrantes</h1>
-
-      <h2>Diretoria Geral</h2>
-      <ng-container *ngFor="let participante of participantes">
-        <div class="geral integrantes-grid">
-                <div
-                    class="integrante d-flex flex-column align-items-center"
-                    *ngIf="participante.diretoria === 'Diretor Geral'">
-                    <div class="integrante-image">
-                        <img [src]="participante.imagem" [alt]="participante.nome" [alt]="participante.nome" width="150px">
-                    </div>
-                    <h3 class="integrante-nome">{{ participante.nome }}</h3>
-                    <p class="integrante-descricao">
-                        {{ participante.descricao }}
-                    </p>
-                </div>
-        </div>
-
-        <h2>Diretoria de Imprensa</h2>
-        <div class="imprensa integrantes-grid">
-          <ng-container *ngFor="let participante of participantes">
-            <div
-                class="integrante d-flex flex-column align-items-center"
-                *ngIf="participante.diretoria === 'Diretor de Imprensa'">
-                <div class="integrante-image">
-                    <img [src]="participante.imagem" [alt]="participante.nome" width="150px">
-                </div>
-                <h3 class="integrante-nome">{{ participante.nome }}</h3>
-                <p class="integrante-descricao">
-                    {{ participante.descricao }}
-                </p>
-            </div>
-          </ng-container>
-        </div>
-
-        <h2>Diretoria de Extensão e Eventos</h2>
-        <div class="extensao integrantes-grid">
-            <div
-                class="integrante d-flex flex-column align-items-center"
-                *ngIf="participante.diretoria === 'Diretor de Extensão e Eventos'">
-                <div class="integrante-image">
-                    <img [src]="participante.imagem" [alt]="participante.nome" width="150px">
-                </div>
-                <h3 class="integrante-nome">{{ participante.nome }}</h3>
-                <p class="integrante-descricao">
-                    {{ participante.descricao }}
-                </p>
-            </div>
-        </div>
-
-        <h2>Diretoria Financeira</h2>
-        <div class="financeira integrantes-grid">
-            <div
-                class="integrante d-flex flex-column align-items-center"
-                *ngIf="participante.diretoria === 'Diretor Financeiro'">
-                <div class="integrante-image">
-                    <img [src]="participante.imagem" [alt]="participante.nome" width="150px">
-                </div>
-                <h3 class="integrante-nome">{{ participante.nome }}</h3>
-                <p class="integrante-descricao">
-                    {{ participante.descricao }}
-                </p>
-            </div>
-        </div>
-
-        <h2>Diretoria de Produtos</h2>
-        <div class="produtos integrantes-grid">
-            <div
-                class="integrante d-flex flex-column align-items-center"
-                *ngIf="participante.diretoria === 'Diretor de Produtos'">
-                <div class="integrante-image">
-                    <img [src]="participante.imagem" [alt]="participante.nome" width="150px">
-                </div>
-                <h3 class="integrante-nome">{{ participante.nome }}</h3>
-                <p class="integrante-descricao">
-                    {{ participante.descricao }}
-                </p>
-            </div>
-        </div>
-      </ng-container>
-    </div>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
 </div>

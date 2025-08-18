@@ -10,10 +10,11 @@ export interface Participante {
 
 export enum Diretoria {
   GERAL = 1,
-  EXRENSAO_EVENTOS = 2,
+  EXTENSAO_EVENTOS = 2,
   IMPRENSA = 3,
   FINANCEIRA = 4,
   PRODUTOS = 5,
+  CONEXAO_PROJETOS = 6,
 }
 
 export interface Descricao {
@@ -30,6 +31,15 @@ export interface Descricao {
 })
 export class SobreNosComponent {
   imagens = 'assets/images/participantes';
+
+  diretorias = [
+    'Diretor Geral',
+    'Diretor de Imprensa',
+    'Diretor de Extensão e Eventos',
+    'Diretor Financeiro',
+    'Diretor de Produtos',
+    'Diretor de Conexão e Projetos',
+  ];
 
   descricoes: Descricao[] = [
     {
@@ -62,6 +72,11 @@ export class SobreNosComponent {
         'Sou aspirante a desenvolvimento back-end, apaixonada por programação, mãe da Anne e adoro praticar esportes',
       participante: 'Monnik Luianne',
     },
+    {
+      texto:
+        'Aluna de Ciência da Computação na UFPI, técnico em informática e aspirante a escritora. Atualmente busca a área de ciência de dados no ramo forense.',
+      participante: 'Thayssa Fernanda',
+    },
   ];
 
   participantes: Participante[] = [
@@ -81,16 +96,16 @@ export class SobreNosComponent {
     {
       nome: 'Thayssa Fernanda',
       diretoria: this.mapToCargo(Diretoria.GERAL),
-      imagem: `${this.imagens}/Thayssa-Fernanda-Rodrigues-Alves.jpg`,
+      imagem: `${this.imagens}/thayssa-fernanda.jpg`,
       descricao: this.mapToDescricao('Thayssa Fernanda'),
     },
 
     // Diretoria de Imprensa
     {
-      nome: 'Ana Carolline',
+      nome: 'Carol Santos',
       diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: 'assets/images/icons/menina.png',
-      descricao: this.mapToDescricao('Ana Carolline'),
+      imagem: `${this.imagens}/carol-santos.jpg`,
+      descricao: this.mapToDescricao('Carol Santos'),
     },
     {
       nome: 'Iara Vasconcelos',
@@ -134,23 +149,17 @@ export class SobreNosComponent {
       imagem: `${this.imagens}/talita-matos.jpg`,
       descricao: this.mapToDescricao('Talita Matos'),
     },
-    {
-      nome: 'Carol Santos',
-      diretoria: this.mapToCargo(Diretoria.IMPRENSA),
-      imagem: `${this.imagens}/carol-santos.jpg`,
-      descricao: this.mapToDescricao('Carol Santos'),
-    },
 
     // Diretoria de Extensão e Eventos
     {
       nome: 'Adélia Mara',
-      diretoria: this.mapToCargo(Diretoria.EXRENSAO_EVENTOS),
-      imagem: `${this.imagens}/Adélia-Carvalho.jpeg`,
+      diretoria: this.mapToCargo(Diretoria.EXTENSAO_EVENTOS),
+      imagem: `${this.imagens}/adelia-carvalho.jpeg`,
       descricao: this.mapToDescricao('Adélia Mara'),
     },
     {
       nome: 'Arielly Cristiny',
-      diretoria: this.mapToCargo(Diretoria.EXRENSAO_EVENTOS),
+      diretoria: this.mapToCargo(Diretoria.EXTENSAO_EVENTOS),
       imagem: `${this.imagens}/Arielly-Cristiny.jpeg`,
       descricao: this.mapToDescricao('Arielly Cristiny'),
     },
@@ -159,7 +168,7 @@ export class SobreNosComponent {
     {
       nome: 'Ana Letícia',
       diretoria: this.mapToCargo(Diretoria.FINANCEIRA),
-      imagem: `${this.imagens}/Ana-Letícia.png`,
+      imagem: `${this.imagens}/ana-leticia.png`,
       descricao: this.mapToDescricao('Ana Letícia'),
     },
 
@@ -170,15 +179,20 @@ export class SobreNosComponent {
       imagem: `${this.imagens}/Ana-Beatriz.jpg`,
       descricao: this.mapToDescricao('Ana Beatriz'),
     },
+    // Diretoria de Conexão e Projetos
+    {
+      nome: 'Diana',
+      diretoria: this.mapToCargo(Diretoria.CONEXAO_PROJETOS),
+      imagem: `${this.imagens}/diana.jpg`,
+      descricao: this.mapToDescricao('Diana'),
+    },
   ];
-
-  // ...existing code...
 
   mapToCargo(diretoria: Diretoria): string {
     switch (diretoria) {
       case Diretoria.GERAL:
         return 'Diretor Geral';
-      case Diretoria.EXRENSAO_EVENTOS:
+      case Diretoria.EXTENSAO_EVENTOS:
         return 'Diretor de Extensão e Eventos';
       case Diretoria.IMPRENSA:
         return 'Diretor de Imprensa';
@@ -186,10 +200,14 @@ export class SobreNosComponent {
         return 'Diretor Financeiro';
       case Diretoria.PRODUTOS:
         return 'Diretor de Produtos';
+      case Diretoria.CONEXAO_PROJETOS:
+        return 'Diretor de Conexão e Projetos';
     }
   }
   mapToDescricao(nome: string): string {
-    return this.descricoes.find(
-      (descricao) => descricao.participante === nome)?.texto || '';
+    return (
+      this.descricoes.find((descricao) => descricao.participante === nome)
+        ?.texto || ''
+    );
   }
 }

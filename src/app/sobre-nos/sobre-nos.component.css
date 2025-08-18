@@ -94,7 +94,6 @@
 
 .integrantes{
     width: 100%;
-    /* display: none !important; */
 }
 
 .integrantes h1{
@@ -122,6 +121,15 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
+.integrante-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    display: block;
+}
+
 .integrante-nome, .integrante-descricao{
     font-family: var(--font2);
     font-size: var(--font-size3);
@@ -145,10 +153,19 @@
 .integrantes-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
     width: 100%;
     justify-items: center;
     margin-bottom: 2rem;
+}
+
+/* 1 integrante: 1 coluna */
+.integrantes-grid:has(> .integrante:only-child) {
+    grid-template-columns: 1fr !important;
+}
+
+/* 2 integrantes: 2 colunas */
+.integrantes-grid:has(> .integrante:nth-child(2)):not(:has(> .integrante:nth-child(3))) {
+    grid-template-columns: 1fr 1fr !important;
 }
 
 @media screen and (max-width: 768px){
