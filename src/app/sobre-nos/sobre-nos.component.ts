@@ -81,6 +81,11 @@ export class SobreNosComponent {
       texto:
       'Arquiteta de Soluções Backend, gosto de compartilhar conhecimento e explorar novas tecnologias. Sou fã de esportes e mãe de pet.',
       participante: 'Adélia Mara'
+    },
+    {
+      texto:
+        'Estudante de Ciência da Computação, me aprofundando em back-end, sistemas embarcados, robótica e hardware. Não abro mão de um bom café e de boas leituras.',
+      participante: 'Maria Ingrid',
     }
   ];
 
